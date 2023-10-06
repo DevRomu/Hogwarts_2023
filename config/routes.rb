@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   # GET /houses/:id => houses#show
 
-  get "houses/:id", to: "houses#show", id: /\d+/
+  get "houses/:id", to: "houses#show", id: /\d+/, as: 'house' # house_path
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

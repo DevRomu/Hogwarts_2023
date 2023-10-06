@@ -8,14 +8,14 @@
   <%= @house.points %> points
 </p>
 
-<h3> Students in house <%%> </h3>
-
+<h3> Students in house <%= @house.name %> </h3>
 <% if @house.students.empty? %>
   <p> There are no students in this house </p>
 <% else %>
   <ul>
     <% @house.students.each do |students|%>
-      <li><%= student.name %></li>
+      <li><%= students.name %></li>
     <% end %>
   </ul>
 <% end %>
+
