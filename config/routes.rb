@@ -3,12 +3,20 @@ Rails.application.routes.draw do
 
   root to: 'houses#index'
 
-  # GET /houses/:id => houses#show
+  resources "houses", only: [:index, :show]
 
-  get "houses/:id", to: "houses#show", id: /\d+/, as: 'house' # house_path
+  # GET / houses => houses#index
+  # GET / houses/:id => houses#show
 
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  # alternative
+  # get 'houses', to:'houses#index'
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  # # GET /houses/:id => houses#show
+
+  # get "houses/:id", to: "houses#show", id: /\d+/, as: 'house' # house_path
+
+  # # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+
+  # # Defines the root path route ("/")
+  # # root "articles#index"
 end
