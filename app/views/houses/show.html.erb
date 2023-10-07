@@ -14,7 +14,7 @@
 <% else %>
   <ul>
     <% @house.students.each do |students|%>
-      <li><%= students.name %></li>
+      <li><%= link_to students.name, students %></li>
     <% end %>
   </ul>
 <% end %>
